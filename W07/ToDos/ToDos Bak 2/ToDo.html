@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do(s)</title>
+    <link rel="stylesheet" href="ToDo.css" />
+  </head>
+  <body>
+    <main>
+      <div class="todo-box">
+        <h1 class="main-title">Todos</h1>
+        <ul class="main-list js-main-list"></ul>
+
+
+        <div class="empty-state">
+          <svg class="checklist-icon"><use href="#checklist-icon"></use></svg>
+          <h2 class="empty-state__title">Begin typing, then hit 'Enter" to add</h2>
+          <p class="empty-state__description">
+            Make a list of your tasks and check them off as you complete them.
+          </p>
+        </div>
+
+
+        <div class="todo-footer">
+          <ul class="filters">
+            <li style="display:inline">
+              <span class="todo-count">
+                <strong id="js-tasks-left" class="todo-count__number">0</strong>
+                <span class="todo-count__text">tasks left</span>
+              </span>    
+            </li>
+            <li style="display:inline">
+              <a href="#" id="js-filter-all" class="js-filter">All</a>
+            </li>
+            <li style="display:inline">
+              <a href="#" id="js-filter-active" class="js-filter-active">Active</a>
+            </li>
+            <li style="display:inline">
+              <a href="#" id="js-filter-completed" class="js-filter-completed">Completed</a>
+            </li>
+          </ul>
+        </div>
+        <form class="js-add-form">
+          <input
+            autofocus
+            type="text"
+            aria-label="Enter a new todo item"
+            placeholder="'finish cleaning the garage'"
+            class="js-todo-input"
+          />
+        </form>
+      </div>
+    </main>
+
+    <svg>
+      <defs>
+        <symbol id="delete-icon" viewBox="0 0 448 448">
+          <path
+            d="m224 0c-123.710938 0-224 100.289062-224 224s100.289062 224 224 224 224-100.289062 
+            224-224c-.132812-123.65625-100.34375-223.867188-224-224zm124.449219 325.824219c4.15625 
+            4.015625 5.828125 9.964843 4.363281 15.558593s-5.835938 9.964844-11.429688 
+            11.429688-11.542968-.207031-15.558593-4.363281l-101.824219-101.824219-101.824219 
+            101.824219c-6.277343 6.0625-16.257812 
+            5.976562-22.429687-.195313s-6.257813-16.152344-.195313-22.429687l101.824219-101.824219-101.824219-101.824219c-4.15625-4.015625-5.828125-9.964843-4.363281-15.558593s5.835938-9.964844 
+            11.429688-11.429688 11.542968.207031 15.558593 4.363281l101.824219 101.824219 101.824219-101.824219c6.277343-6.0625 16.257812-5.976562 22.429687.195313s6.257813 16.152344.195313 
+            22.429687l-101.824219 101.824219zm0 0"
+            fill="#D80027"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <script src="ToDo.js"></script>
+    <script src="ls.js"></script>
+    <script src="utilities.js"></script>
+  </body>
+</html>
+
+
+

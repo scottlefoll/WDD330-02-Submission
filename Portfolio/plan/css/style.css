@@ -1,0 +1,276 @@
+@charset "UTF-8"; /* not necessary */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Montserrat.eot'); /* IE9 Compat Modes */
+  src: url('Montserrat.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Montserrat.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Montserrat.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Montserrat.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Montserrat.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+.home-palette {
+  width: 4.688rem;
+  height: 9.375rem;
+}
+
+
+p {
+  padding: .625rem;
+  line-height: 125%;
+}
+
+.square {
+	height: 5px;
+	width: 5px;
+  }
+
+.target-ul {
+  line-height: 125%
+}
+
+.weather-a {
+/*   color: #C32F27; */
+  color: #F7B538;
+  top: 4rem;
+}
+  
+/* phone or baseline views **************************/
+
+
+
+
+header {
+	background-color: #ACCBE1;
+/*   	background-image: url("https://cdn.glitch.global/5d4aaed1-8c6a-44bf-b189-aadc18399fb9/ws_Red_Sunset_Ocean_%26_Red_Clouds_852x480.jpg?v=1655229776493"); */
+  	color: yellow;
+  	border-radius: 3px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer {
+	background-color: #2191FB; 
+	color: yellow;
+  	border-radius: 3px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 767px;
+	margin: 0 auto;
+}
+
+body {
+	font-size: .45rem;
+	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
+  	background-image: url("paper.gif");
+  	background-color: #cccccc;
+  }
+
+header,
+main {
+	max-width: 767px;
+	margin: 0 auto;
+}
+h1 {
+	font-size: .9rem;
+	color: yellow;
+  	font-weight: 700;
+  	text-align: center;
+}
+h2 {
+	color: #536878;
+}
+
+.home-logo-demo {
+  	width: 4rem;
+  	height: 4rem;
+}
+
+.home-logo {
+  	width: 4rem;
+  	height: 4rem;
+  	left: .8rem;
+}
+
+
+
+nav {
+	background-color: #2191FB;;
+  	border-radius: 3px;
+	margin: 0 auto;
+	max-width: 780px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+nav ul li a {
+	display: block;
+  	color: yellow;
+	text-align: center;
+	padding: 0.75rem;
+	text-decoration: none;
+	font-size: 0.95rem;
+	background: linear-gradient(90deg, transparent, yellow, transparent) bottom /
+		var(--d, 0) 3px no-repeat;
+	transition: 0.5s;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+	font-size: 0.8rem;
+}
+main article {
+	margin: 1rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+/* 	background-color: #eeeeee; */
+  background-color: #FAECE0;
+}
+
+main article ul {
+	margin: 1rem 0 0 1rem;
+}
+main picture {
+	display: none;
+	margin: 1rem;
+}
+
+footer {
+	background-color: ##2191FB;;
+	color: #F7B538;
+	font-size: .95rem;
+}
+
+footer p {
+  	background-color: #2191FB;
+  	color: yellow;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer p span:not(:last-child)::after {
+	content: " 🌧️\00a0";
+	background-color: ##2191FB;;
+	color: #F7B538;
+}
+
+
+/* Tablet Views ******************************/
+@media only screen and (min-width: 37.5em) {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	body {
+		font-size: .75rem;
+		font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
+	}
+
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 auto;
+	}
+
+	nav a {
+		font-size: 1rem;
+	}
+
+	nav a:hover {
+	/* 	background-color: #bbb;
+		color: #36454f; */
+		--d: 75%;
+	}
+
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+  	
+	article:nth-child(4) {
+		grid-column: span 2;
+	}
+	main picture {
+		display: block;
+	}
+	main picture img {
+		width: 100%;
+    	height: 100%;
+		border: 1px solid #bbbbbb;
+	}
+
+	footer {
+		background-color: ##2191FB;;
+		color: #F7B538;
+		font-size: 1rem;
+	}
+
+	footer p {
+		flex-direction: row;
+    	background-color: ##2191FB;;
+    	color: #F7B538;
+	}
+
+	footer p span:not(:last-child)::after {
+		content: " 🌧️\00a0";
+    	background-color: ##2191FB;;
+		color: #F7B538;
+	}
+
+	target-scenarios: {
+		grid-column: span 2;
+	}
+	
+}
+
+/* Desktop Views ****************************/
+@media only screen and (min-width: 60em) {
+	h1 {
+		font-size: 2rem;
+	}
+
+  	body {
+		font-size: 1rem;
+		font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
+  }
+  
+	nav a {
+		font-size: 1.1rem;
+	}
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+  	.target-scenarios {
+    	grid-column: span 3;
+  }
+  
+  	article:nth-child(3) {
+		grid-column: span 1;
+	}
+  	footer {
+		background-color: #2191FB;
+	  	color: #F7B538;
+		font-size: 1.1rem;
+	}
+
+}

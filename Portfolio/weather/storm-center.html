@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="UpFrontWeather.com Storm Center Reporting Form for WDD230 W04"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Scott LeFoll" />
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- phone-default -->
+    <link href="css/small.css" rel="stylesheet">
+    <!-- enhance-tablet -->
+    <link href="css/medium.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="css/large.css" rel="stylesheet">
+    <!-- <link href="css/xlarge.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Montserrat"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>UpFrontWeather.com Storm Center page</title>
+  </head>
+
+  <body class="weather-content">
+    <header>
+      <div class="logo">
+          <picture>
+            <img 
+              src="images/weather.png"
+              alt="upfrontweather.com image"
+            />
+          </picture>
+          <section class="headings">
+            <h1>Up Front Weather</h1>
+            <q class="m">Accurate weather, when you need it.</q>
+          </section>    
+      </div>
+    </header>
+
+    <nav class="mobile-container">
+
+      <!-- ****************************** Hamburger menu html-->
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="active">Menu</a>
+        <div id="myLinks">
+          <a href="index.html">🏡Home</a>
+          <a href="preston.html">🚜Preston</a>
+          <a href="soda-springs.html">🌄Soda Springs</a>
+          <a href="fish-haven.html">🏞️Fish Haven</a>
+          <a href="storm-center.html">⛈️Storm Center</a>
+          <a href="gallery-7.html">🖼️Gallery</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+  <!-- ****************************** Big nav menu html-->
+        <ul class="big-menu">
+          <li><a href="index.html" class="active">🏡Home</a></li>
+          <li><a href="preston.html">🚜Preston</a></li>
+          <li><a href="soda-springs.html">🌄Soda Springs</a></li>
+          <li><a href="fish-haven.html">🏞️Fish Haven</a></li>
+          <li><a href="storm-center.html">⛈️Storm Center</a></li>
+          <li><a href="gallery-7.html">🖼️Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main class="weather-container-storm">
+        <h2>Storm Center Report</h2>
+
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Reporter Information</legend>
+                <label class="top" for="fname">Full name* <input type="text" pattern="[A-Za-z, ' ']+" title="letters only, 5 characters required" id="fname" name="fname" minlength="5" value="" required></label>
+                <label class="top" for="phone">Phone *<input type="tel" title="digits only, 10 characters required" id="phone" name="phone" value="" required></label>
+                <label class="top" for="email">Email <input type="email" id="email" name="email" placeholder="someone@gmail.com"></label>
+                <label class="top" for="zip">Zip Code *<input type="text" title="digits only, 5 characters required" pattern="^\d{5}$" id="zip" name="zip" placeholder="12345" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Storm Information</legend>
+                <label class="top">Storm Date <input type="date" name="completeDate"></label>
+
+                <label class="top" title="Select or enter a storm type" for="stormType">Storm type:
+                <input list="stormT" name="stormType" id="stormType"></label>
+                <datalist id="stormT">
+                  <option value="blizzard">blizzard</option>
+                  <option value="flash flood">flash flood</option>
+                  <option value="hail storm">hail storm</option>
+                  <option value="hurricane">hurricane</option>
+                  <option value="snow storm">snow storm</option>
+                  <option value="thunderstorm">thunderstorm</option>
+                  <option value="tornado">tornado</option>
+                  <option value="tsunami">tsunami</option>   
+                </datalist>
+
+                <label class="top">Storm Region
+                  <select name="stormRegion">
+                      <option value="">Please Select &#9662;</option>       
+                      <option value="Fish Haven">Fish Haven</option>
+                      <option value="Preston">Preston</option>
+                      <option value="Soda Springs">Soda Springs</option>
+                  </select>
+                </label><br>
+              
+                <div><label class="sbs" for="severity">Storm Severity (1-10):
+                  <input type="range" id="severity" name="severity" min="1" max="10"></label></div>
+
+                <div>Are you in-danger?</div>
+                <label class="sbs"><input type="radio" name="danger" value="yes"> yes </label>
+                <label class="sbs"><input type="radio" name="danger" value="maybe"> maybe </label>
+                <label class="sbs"><input type="radio" name="danger" value="no"> no </label>
+            </fieldset>
+
+            <input type="submit" value="Send Storm Report"  class="submitBtn">
+        </form>
+
+    </main>
+    
+<!-- FOOTER HERE -->   
+
+<footer class="footer-storm">
+      <p class="p-footer">        
+        <span
+          >Ⓒ<a href="index.html"
+            >UpFrontWeather.com</a
+          >|</span>
+
+        <span>Attributions | </span>
+        <span>Scott R. LeFoll</span>
+      </p>
+      <p class="p-footer2">
+        Last modified: &nbsp; <span id="date-time"></span>
+      </p>
+    </footer>
+
+    <script> 
+      let dt = new Date();
+      const currentDate = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
+      document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
+    </script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+<!-- ***************************************************** -->

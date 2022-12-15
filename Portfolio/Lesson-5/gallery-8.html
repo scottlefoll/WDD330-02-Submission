@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="UpFrontWeather.com Preston Page for WDD230 W02"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Scott LeFoll" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>UpFrontWeather.com Gallery Page</title>
+  </head>
+
+  <body class="weather-content">
+    <header>
+      <div class="logo">
+          <picture>
+            <img 
+              src="images/weather.png"
+              alt="upfrontweather.com image"
+            />
+          </picture>
+          <section class="headings">
+            <h1>Up Front Weather</h1>
+            <q class="m">Accurate weather, when you need it.</q>
+          </section>    
+      </div>
+    </header>
+
+
+    <nav class="mobile-container">
+
+      <!-- ****************************** Hamburger menu html-->
+      <div class="topnav">
+        <a href="#home" class="active">Menu</a>
+        <div id="myLinks">
+          <a href="../index.html">🏡Home</a>
+          <a href="weather.html">🚜Preston</a>
+          <a href="soda-springs.html">🌄Soda Springs</a>
+          <a href="fish-haven.html">🏞️Fish Haven</a>
+          <a href="storm-center.html">⛈️Storm Center</a>
+          <a href="gallery-7.html">🖼️Gallery</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+  <!-- ****************************** Hamburger menu html-->
+        <ul class="big-menu">
+          <li><a href="weather.html" class="active">🏡Home</a></li>
+          <li><a href="preston.html">🚜Preston</a></li>
+          <li><a href="soda-springs.html">🌄Soda Springs</a></li>
+          <li><a href="fish-haven.html">🏞️Fish Haven</a></li>
+          <li><a href="storm-center.html">⛈️Storm Center</a></li>
+          <li><a href="gallery-7.html">🖼️Gallery 7</a></li>
+        </ul>
+    </nav>
+    <main>
+      <h2 class="gallery-h2">Gallery 7</h2>
+    <div class="weather-container7">
+      
+      
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="images/gallery-01.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 1</figcaption>
+     </figure></div>
+
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="gallery-02.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 2</figcaption>
+     </figure>Picture 2</div>
+
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="gallery-03.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 3</figcaption>
+     </figure>Picture 3</div>
+
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="gallery-04.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 4</figcaption>
+     </figure>Picture 4</div>
+
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="gallery-05.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 5</figcaption>
+     </figure>Picture 5</div>
+
+      <div class="content-box7"><figure>
+        <picture> 
+           <img src="gallery-06.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 6</figcaption>
+     </figure>Picture 6</div>
+
+      <div class="content-box7"><figure>
+        <picture>
+           <img src="gallery-07.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 7</figcaption>
+     </figure>Picture 7</div>
+
+      <div class="content-box7"><figure>
+        <picture> 
+           <img src="gallery-08.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 8</figcaption>
+     </figure>Picture 8</div>
+
+      <div class="content-box7"><figure>
+        <picture> 
+           <img src="gallery-09.jpg" alt="Test" class="abc">
+        </picture>
+        <figcaption>Picture 9</figcaption>
+     </figure>Picture 9</div>
+
+     <div class="content-box7"><figure>
+      <picture>
+         <img src="gallery-10.jpg" alt="Test" class="abc">
+      </picture>
+      <figcaption>Picture 9</figcaption>
+   </figure>Picture 10</div>
+
+    </div>
+    </main>
+
+    <footer class="footer2">
+      <p class="p-footer">        
+        <span
+          >Ⓒ<a href="weather.html"
+            >UpFrontWeather.com</a
+          >|</span>
+
+        <span>Attributions | </span>
+        <span>Scott R. LeFoll</span>
+      </p>
+      <p class="p-footer2">
+        Last modified: &nbsp <span id="date-time"></span>
+      </p>
+    </footer>
+
+    <script> 
+      let dt = new Date();
+      const currentDate = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
+      document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
+    </script>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+<!-- ***************************************************** -->

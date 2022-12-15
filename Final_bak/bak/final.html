@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="aiart.js"></script>
+        <script src="api.js"></script>
+        <script src="utilities.js"></script>
+        <script src="scripts.js" type="module"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+        <script src="js/jquery.keyframes.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/style-transfer.css">
+
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Art Style Transfer</title>
+    </head>
+    <body onload="displayArt()">
+        <div style="text-align:center">
+            <h2>AI Art</h2>
+            <p>Click on an image below:</p>
+        </div>
+        <!-- The three art columns -->
+        <div class="row">
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQyNDQtcGRmYW1vdXNwYWludGluZ2V0YzA2ODAwMy0xLWltYWdlLWpvYjU4Mi0yLmpwZw.jpg" alt="starryNight" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjA4YmF0Y2gxNS1leWUtMDEuanBn.jpg" alt="SunStars" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/udnie.jpg?raw=true" alt="scream" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTk4LTA3Ny1wbG95XzIuanBn.jpg" alt="harvest" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/raw/master/examples/thumbs/rain_princess.jpg" alt="mountFuji" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/the_shipwreck_of_the_minotaur.jpg?raw=true" alt="wave" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/the_scream.jpg?raw=true" alt="park" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/la_muse.jpg?raw=true" alt="abstract1" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQyMDItMTYuanBn.jpg" alt="mountFuji" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQxOS0yMDAzMS1qb2I1ODItMl8xLmpwZw.jpg" alt="wave" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkZ2Vvcmdlc3NldXJhdC0wMS1yb2IuanBn.jpg" alt="park" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzMS0wMDMtbmFwXzEuanBn.jpg" alt="abstract1" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTk4LTA4NC1wbG95LmpwZw.jpg" alt="beach" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzMi0wMDgtbmFwLmpwZw.jpg" alt="abstract2" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMjQ0LXBkZmFtb3VzcGFpbnRpbmdldGMwNjgwNTgtaW1hZ2VfMy5qcGc.jpg" alt="stairs" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTQwLTAzLWpqLmpwZw.jpg" alt="abstract3" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <!-- File input field -->
+        <p>Upload an Image</p>
+        <input type="file" id="file"
+            onchange="return fileValidation()" />
+
+        <!-- <input type="file" id="myFile" multiple="" size="50" onchange="choosePhoto()"> -->
+
+        <!-- Image preview -->
+        <div id="imagePreview"></div>
+            <div class="photo-container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="photoImg" style="width:100%">
+            <div id="photoText"></div>
+        </div>
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+        </div>
+        <script src="js/style-transfer.js"></script>
+    </body>
+</html>

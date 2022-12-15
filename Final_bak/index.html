@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>AI Art Style Transfer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style-transfer.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+        <script src="js/jquery.keyframes.min.js"></script>
+        <script src="aiart.js"></script>
+        <script src="api.js"></script>
+        <script src="utilities.js"></script>
+        <script src="scripts.js" type="module"></script>    
+    </head>
+    <body onload="displayArt()">
+        <div style="text-align:center">
+            <h2>AI Art</h2>
+            <p>Click on an image below:</p>
+        </div>
+        <!-- The three art columns -->
+        <div class="row">
+            <div class="column">
+                <!-- <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQyNDQtcGRmYW1vdXNwYWludGluZ2V0YzA2ODAwMy0xLWltYWdlLWpvYjU4Mi0yLmpwZw.jpg" alt="starryNight" style="width:100%" onclick="displayArt(this);"> -->
+                <img src="starrynight.jpg" alt="starryNight" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjA4YmF0Y2gxNS1leWUtMDEuanBn.jpg" alt="SunStars" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/udnie.jpg?raw=true" alt="scream" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTk4LTA3Ny1wbG95XzIuanBn.jpg" alt="harvest" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/raw/master/examples/thumbs/rain_princess.jpg" alt="mountFuji" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/the_shipwreck_of_the_minotaur.jpg?raw=true" alt="wave" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/the_scream.jpg?raw=true" alt="park" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://github.com/lengstrom/fast-style-transfer/blob/master/examples/style/la_muse.jpg?raw=true" alt="abstract1" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQyMDItMTYuanBn.jpg" alt="mountFuji" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGQxOS0yMDAzMS1qb2I1ODItMl8xLmpwZw.jpg" alt="wave" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkZ2Vvcmdlc3NldXJhdC0wMS1yb2IuanBn.jpg" alt="park" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzMS0wMDMtbmFwXzEuanBn.jpg" alt="abstract1" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTk4LTA4NC1wbG95LmpwZw.jpg" alt="beach" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmYW1vdXNhcnRpc3RzMi0wMDgtbmFwLmpwZw.jpg" alt="abstract2" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMjQ0LXBkZmFtb3VzcGFpbnRpbmdldGMwNjgwNTgtaW1hZ2VfMy5qcGc.jpg" alt="stairs" style="width:100%" onclick="displayArt(this);">
+            </div>
+            <div class="column">
+                <img src="https://images.rawpixel.com/image_1000/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BkMTQwLTAzLWpqLmpwZw.jpg" alt="abstract3" style="width:100%" onclick="displayArt(this);">
+            </div>
+        </div>
+        <!-- File input field -->
+        <p>Upload an Image</p>
+        <input type="file" id="file"
+            onchange="return fileValidation()" />
+
+        <!-- <input type="file" id="myFile" multiple="" size="50" onchange="choosePhoto()"> -->
+
+        <!-- Image preview -->
+        <div id="imagePreview"></div>
+            <div class="photo-container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="photoImg" style="width:100%">
+            <div id="photoText"></div>
+        </div>
+        <div class="container-transfer">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+        </div>
+
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <div class="box">
+                        <input type="file" id="contentFile" target="content" class="inputfile inputfile-red" data-multiple-caption="{count} files selected" multiple />
+                        <label for="contentFile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
+                            </svg> 
+                            <span>Pick your own photo </span>
+                        </label>
+                    </div>
+                    <div class="imageContainer">
+                        <div class="scan scan-content"></div>
+                        <div class="screen">
+                            <img class="col-12 p-0" id="contentImg" src="camp.jpg"/> 
+                        </div>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center pt-md-4 mt-md-4 pt-lg-5 mt-lg-5 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-4 mt-3">
+                            <div class="arrowAnim left-to-right">
+                                <div class="arrowSliding">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay1">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay2">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay3">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4"><i class="fas fa-plus"></i></div>                        
+                        <div class="col-4 mt-3">
+                            <div class="arrowAnim right-to-left">
+                                <div class="arrowSliding">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay1">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay2">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay3">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-0 pt-3 pb-3">
+                        <button class="btn btn-transfer">
+                            <i class="fas fa-random"></i> 
+                            <span>Click to transfer</span>
+                        </button>
+                    </div>
+                    <div class="col-12 arrowAnim top-to-bottom">
+                        <div class="arrowSliding">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay1">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <div class="box">
+                        <input type="file" id="styleFile" target="style" class="inputfile inputfile-blue" data-multiple-caption="{count} files selected" multiple />
+                        <label for="styleFile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
+                            </svg> 
+                            <span>Pick your own style </span>
+                        </label>
+                    </div>
+                    <div class="imageContainer">
+                        <div class="scan scan-style"></div>
+                        <div class="screen">
+                            <img class="col-12 p-0" id="styleImg" src="starry.jpg"/> 
+                        </div>
+                        <em></em>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-block d-md-none">
+                <div class="row col-12 text-center p-0 m-0 mt-3">
+                    <div class="col-4 mt-3">
+                        <div class="arrowAnim leftTop-to-rightBottom">
+                            <div class="arrowSliding">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay1">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay3">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4"><i class="fas fa-plus"></i></div>                        
+                    <div class="col-4 mt-3">
+                        <div class="arrowAnim rightTop-to-leftBottom">
+                            <div class="arrowSliding">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay1">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay3">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-block d-md-none">
+                <div class="col-10 col-md-6 col-lg-4 offset-1 offset-md-3 offset-lg-4 text-center pt-3 pb-2">
+                    <button  class="btn btn-transfer">
+                        <i class="fas fa-random"></i> 
+                        <span>Click to transfer</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="arrowAnim top-to-bottom">
+                        <div class="arrowSliding">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay1">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-md-3">
+                <div class="col-12 col-md-4 offset-md-4 text-center">
+                        <div class="canvasContainer col-12 p-0">
+                            <i id="transfering" class="fas fa-spinner fa-spin d-none"></i>
+                            <canvas id="stylized" class="d-none"></canvas>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/style-transfer.js"></script>
+    </body>
+</html>

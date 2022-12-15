@@ -1,0 +1,47 @@
+/* ------------------------- Code From Flex Example-------------- */
+
+* {padding: .35rem;}
+.home-h2 {
+	text-align:center;}
+.home-h3{
+	text-align:center;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
+}
+.home-h4{
+	text-align:center;
+	color: #000;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
+}
+.home-section {
+	max-width: 600px;
+  margin: .5rem auto;
+	border:1px solid #bbb;
+  background-color: #eee;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+article {
+  display: flex;
+	flex-direction: row;
+}
+
+article:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.home-img {border:1px solid #000080; width: 100%; height: auto;}
+.data {background-color:#000; color:#fff;padding:.75rem;display: table-cell;align-items:center;}
+
+
+
+
+
+
+
+
+
+
+

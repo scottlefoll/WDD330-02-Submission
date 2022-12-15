@@ -1,0 +1,5 @@
+fast-style picture blending
+
+conda activate style-transfer
+
+python evaluate.py --checkpoint ./rain-princess.ckpt --in-path <path_to_input_file> --out-path ./output_image.jpg

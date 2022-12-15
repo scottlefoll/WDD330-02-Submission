@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta 
+        charset="UTF-8" 
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+        content="width=device-width, initial-scale=1.0"
+        name="viewport" 
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-transfer.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Proxima+Nova" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+    <script src="js/jquery.keyframes.min.js"></script>
+    <script src="aiart.js"></script>
+    <script src="api.js"></script>
+    <script src="utilities.js"></script>
+    <script src="scripts.js" type="module"></script>  
+
+    <title>AI Art | Art bent by the matrix. | AI Art Algorithms</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/6280f6037b967b11798f6fe5/1g33s1vev";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <div class="content">
+      <header>
+        <div class="navbar1">
+          <nav>
+            <ul>
+              <li>
+                <div class="logo-box">
+                  <a href="index.html"
+                    ><img
+                      class="logo-image"
+                      src="https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/techrise%203.png?v=1653152165832"
+                      alt="AI Art Logo image"
+                  /></a>
+                </div>
+              </li>
+              <li><a href="index.html">Home</a></li>              
+              <li><a href="transfer.html" target="_self">Transfer</a></li>
+              <li><a href="aiart.html" target="_self">AI</a></li>
+              <li><a href="about.html" target="_self">About</a></li>
+              <li><a href="contact.html" target="_self">Contact</a></li>
+            </ul>
+            <h1 class="home-headline1">AI Art</h1>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="banner-box">
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Art"
+              src="https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/1579984.jpg?v=1653684749508"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Highland"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/highland_172217011-612x612.jpg?v=1671024371660"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="About"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/chicago_rain_princess.jpg?v=1671024363319"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/starrynight.JPG?v=1671024454686"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/aiart2.JPG?v=1671024348394"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/the_shipwreck_of_the_minotaur.jpg?v=1671024442495"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/aiart1.jpeg?v=1671024343694"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/stata_udnie_header.jpg?v=1671024393066"
+            />           
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/erickson.jpg?v=1671024368638"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tech"
+              src="https://cdn.glitch.global/ab66e605-c32f-40f1-bbbf-16f7d18c81ce/chicago_wave.jpg?v=1671024375578"
+            />
+          </div>
+
+          <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {
+                myIndex = 1;
+              }
+              x[myIndex - 1].style.display = "block";
+              setTimeout(carousel, 9000);
+            }
+          </script>
+
+          <div class="home-box">
+            <p>
+              <img
+                class="circle-tips"
+                src="https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/Add%20a%20heading%205A.png?v=1653738412543"
+                alt="tips"
+                title="Quick Tips"
+              />
+            </p>
+            <iframe
+              src="circle_menu.html"
+              class="circle_menu_widget"
+              style="border: none"
+              title="Iframe Circle_Menu"
+            ></iframe>
+            <h2 class="home-headline1a">AI Art Algorithms & Generators</h2>
+            <h3 class="home-headline2">Introduction</h3>
+
+            <p class="home-paragraph2">The following is a list of the most powerful AI art generators, some paid and some free:</p>
+            <div>
+                <ul>
+                    <li>DeepDream</li>
+                    <li>Stable Diffusion</li>
+                    <li>Dall-e 2</li>
+                    <li>Midjourney</li>
+                    <li>StyleGAN</li>
+                    <li>Jasper</li>
+                </ul>
+            </div><br>
+            
+            <div></div>
+            <p>The following are some of the powerful AI art algorithms available for machine learning:</p>
+                <ul>
+                    <li>Generative Adverserial Networks (GANs)</li>
+                    <li>Neural Transfer Networks (aka Style Transfer)</li>
+                    <li>Vector Quantized Generative Adversarial Network and 
+                        Contrastive Language–Image Pre-training</li>
+                    <li>Convolutional Neural Network</li>
+                    <li>Controller Area Networks (CANs)</li>
+                </ul>
+            </div><br><br><br><br><br><br>
+
+
+            <footer class="social-footer">
+              <div>
+                <div class="meta">©2022 Scott LeFoll - WDD 330-02</div>
+                <a href="mailto:scottlefoll@gmail.com"
+                  ><i class="meta2">scottlefoll@gmail.com</i></a
+                >
+                <a
+                  class="meta3"
+                  href="https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/Home%20page%209.jpg?v=1653769230425"
+                  target="_blank"
+                  >Wireframe</a
+                >
+
+                <a
+                  class="meta4"
+                  href="https://techrise.glitch.me/site-plan.html"
+                  target="_blank"
+                  >Siteplan</a
+                >
+
+                <iframe
+                  src="social-widget.html"
+                  class="social-widget"
+                  style="border: none"
+                  title="Iframe Social"
+                ></iframe>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

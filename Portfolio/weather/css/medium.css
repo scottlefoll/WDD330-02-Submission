@@ -1,0 +1,365 @@
+/* Tablet Views ******************************/
+/* 35em is also 560px (if basefont is 16px) */
+@media only screen and (min-width: 35rem) {
+    /* Medium Device */
+	.contact-container {
+		display: grid;
+		grid-template-columns: 2fr;
+		position: relative;
+		height: 350px;
+		width: 100%;
+		top: -14rem;
+	}
+
+	.address-box {
+		grid-column: 2;
+		font-size: 1rem;
+		text-align: left;
+		justify-content: left;
+		/* align-items: left; */
+		margin-top: 5vh;
+	}
+
+	.big-menu {
+		display: flex;
+	}
+
+	.content-box {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		position: relative;
+		grid-gap: .5rem;
+		background-color: white;
+	}
+	
+	.gallery-content-box1 {
+		display: flex;
+		grid-column: 1;
+		position: relative;
+		margin: 0 0 1rem 0;
+		border: none;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+	
+	.gallery-content-box2 {
+		display: flex;
+		grid-column: 2;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+	
+	.gallery-content-box3 {
+		display: flex;
+		grid-column: 1/3;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		height: 400px;
+		width: 100%;
+		background-color: #cccccc;
+	}
+
+	.gallery-fig {
+		Display: none;
+		position: absolute;
+		font-weight: 600;
+		left: 0;
+		text-align: left;;
+		padding-left: 2rem;
+		bottom: 1rem;
+	}
+	
+	.gallery-h2 {
+		font-size: 1.5rem;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		top: 1rem;
+	}
+	
+	.gallery-pic {
+		display: block;
+		position: relative;
+		margin: 1rem auto;
+		width: 100%;
+		height: auto;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	header img {
+		width: 100%;
+	}
+
+	.headings h1 {
+		font-size: 2rem;
+		margin: 0;
+	}
+	
+	.hero-image {
+		height: 400px; /* You must set a specified height */
+	  }	
+
+	.hero-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/franklin800.jpg"); /* The image used */
+		height: 400px; /* You must set a specified height */
+	}
+
+	.logo img {
+		width: 6rem;
+		height: auto;
+	}
+
+	.map-box {
+		display: flex;
+		grid-column: 1;
+		margin: 0 auto;
+		width: 350px;
+		height: 300px;
+		align-items: center;
+		justify-content: center;
+	} 
+
+	.map {
+		display: flex;
+		margin: 0 auto;
+		width: 350px;
+		height: 300px;
+		margin-top: 3vh;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.m {
+		letter-spacing: 1.5pt;
+		font-size: 0.9rem;
+	}
+
+
+	a:active {
+		background-color:  #2191FB;
+		color: white;
+		}
+
+	.p-stats {
+		height: 1rem;
+		padding: .70rem;
+		left: .25rem;
+		font-size: .85rem;
+		text-align: left;
+		/* align-items: left; */
+		justify-content: left;
+		}
+
+	.rodeo {
+			width: 300px;
+			height: 200px;
+			padding: 15px;
+			float: right
+			
+		}
+		
+	#rodeo-box {
+			background-color: #ACCBE1;
+			display: block;
+			position: relative;
+			top: -14rem;
+		}
+
+	#rodeo-box2 {
+		background-color: #ACCBE1;
+		display: block;
+		position: relative;
+		top: -14rem;
+	}
+
+	.rodeo-pic {
+		width: 250px;
+		height: 188px;
+		padding: 15px;
+		float: right
+	}
+
+	.stat-summary {
+		display: block;
+		position: relative;
+		text-align: left;
+		color: yellow;
+		height: 11rem;
+		width: 14rem;
+		top: -42vh;
+		left: 1rem;
+		font-size: 1.25rem;
+		font-weight: 900;
+		background: radial-gradient(#eee, #4567aa);
+		border: 1px solid #000;
+		padding: .5rem;
+		box-shadow: 0 0 30px #333;
+		opacity: 0.85;
+	}
+
+
+
+	.weather-container {
+		display: grid;
+		position: relative;
+		margin: 0 0 2rem 0;
+		border: none;
+		padding: 1rem;
+		width: 80%;
+		margin-left: 20vw;
+		margin-right: 20vw;
+		width: 60vw;
+		top: -12rem;
+	}
+	
+
+
+/*----------- BODY --------------*/
+
+body {
+    font-size: .95rem;
+}
+
+
+/*----------- HEADER --------------*/
+
+/*----------- FORRM --------------*/
+
+.weather-container-storm {
+	display: block;
+	position: relative;
+	margin: 0 0 2rem 0;
+	border: none;
+	padding: 1rem;
+	/* width: 80%; */
+	/* margin-left: 20vw; */
+	/* margin-right: 20vw; */
+	/* width: 60vw; */
+	top: 1rem;
+}
+
+/*----------- NAVIGATION --------------*/
+    /* nav ul {margin-left: 2%;}
+    nav ul li {width: auto;}
+    nav ul li:first-child a {border-left: 1px solid #777;}
+    nav ul li:last-child a {border-right: 1px solid #777;}
+    nav ul li a{padding: .5rem 1rem;} */
+
+	nav a {
+		font-size: 1rem;
+	}
+
+	nav {
+		background-color: #2191FB;
+		margin: 0 auto;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+		}
+	
+	nav ul {
+		display: flex;
+		list-style-type: none;
+		overflow: hidden;
+		}
+
+	nav ul li {
+		flex: 1 1 auto;
+	}
+	
+	nav a:hover {
+		background-color: #bbb;
+		color: #36454f;
+		--d: 75%;
+		}
+		  
+	nav ul li a {
+		display: block;
+		color: yellow;
+		text-align: center;
+		padding: 0.75rem;
+		text-decoration: none;
+		font-size: 0.95rem;
+		background: linear-gradient(90deg, transparent, yellow, transparent) bottom /
+					var(--d, 0) 3px no-repeat;
+		transition: 0.5s;
+		}
+
+	nav ul li:active {
+		background-color: #2191FB;
+		color: white;
+		}
+
+        .topnav #myLinks {
+            display: none;
+            }
+            
+        .topnav a {
+            display: none;
+            }
+            
+        .topnav a.icon {
+            display: none;
+        }
+    
+        .top-message-box {
+            display: none;
+        }
+    
+        .top-message {
+            display: none;
+        }
+
+/*----------- MAIN --------------*/
+
+
+
+/*----------- FOOTER --------------*/
+.footer3 {
+    top: 0;
+    font-size: .95rem;
+    margin-top: 1rem;
+    }
+
+.footer-storm {
+	font-size: .95rem;
+	top: 1rem;
+	margin-top: 2rem;
+	padding-top: 2rem;
+}
+	
+footer p {
+    flex-direction: row;
+    }
+
+footer p span:not(:last-child)::after {
+    content: " 🌧️\00a0";
+    }
+
+} /* end of media query */

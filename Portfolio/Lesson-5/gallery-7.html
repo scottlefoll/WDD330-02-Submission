@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="UpFrontWeather.com Gallery for WDD230 W02"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Scott LeFoll" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Montserrat"
+    />
+    <title>UpFrontWeather.com Preston page</title>
+  </head>
+
+  <body class="weather-content">
+   
+    <div id="topDIV" style="padding:16px;background-color:lightgray"></div>
+
+    <header>
+      <div class="logo">
+          <picture>
+            <img 
+              src="images/weather.png"
+              alt="upfrontweather.com image"
+            />
+          </picture>
+          <section class="headings">
+            <h1>Up Front Weather </h1>
+            <q class="m">Accurate weather, when you need it.</q>
+          </section>    
+      </div>
+    </header>
+
+
+    <nav class="mobile-container">
+
+      <!-- ****************************** Hamburger menu html-->
+
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" >Menu</a>
+        <div id="myLinks">
+          <a href="weather.html" id="topnav-home" class="active">🏡Home</a>
+          <a href="preston.html" id="topnav-preston">🚜Preston</a>
+          <a href="soda-springs.html" id="topnav-soda">🌄Soda Springs</a>
+          <a href="fish-haven.html" id="topnav-fish">🏞️Fish Haven</a>
+          <a href="storm-center.html" id="topnav-storm">⛈️Storm Center</a>
+          <a href="gallery-7.html" id="topnav-gallery">🖼️Gallery</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- ****************************** Hamburger menu html-->
+        <ul class="big-menu">
+          <li><a href="../index.html" id="home" class="active">🏡Home</a></li>
+          <li><a href="preston.html" id="preston">🚜Preston</a></li>
+          <li><a href="soda-springs.html" id="soda">🌄Soda Springs</a></li>
+          <li><a href="fish-haven.html" id="fish">🏞️Fish Haven</a></li>
+          <li><a href="storm-center.html" id="storm">⛈️Storm Center</a></li>
+          <li><a href="gallery-7.html" id="gallery">🖼️Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <h2>Weather Gallery</h2>
+        
+      <div class="gallery-container">
+        <div class="gallery-content-box1" id="gallery-pic-box1">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-01.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-01.jpg" alt="weather">     -->
+            <figcaption class="gallery-fig">Lightning at sunset</figcaption>
+        </div>
+
+        <div class="gallery-content-box2" id="gallery-pic-box2">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-02.jpg" lt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-02.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Whiteout on the farm</figcaption>
+        </div>
+
+        <div class="gallery-content-box3" id="gallery-pic-box3">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-03.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-03.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Dual twisters near Preston</figcaption>
+        </div>
+
+        <div class="gallery-content-box1" id="gallery-pic-box4">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-04.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-04.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Soda Springs gets buried</figcaption>
+        </div>
+
+        <div class="gallery-content-box2" id="gallery-pic-box5">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-05.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-05.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Storm at Bear Lake</figcaption>
+        </div>
+
+        <div class="gallery-content-box3" id="gallery-pic-box6">
+          <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-06.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-06.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Storm clouds over the lake</figcaption>
+        </div>
+
+        <div class="gallery-content-box1" id="gallery-pic-box7">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-07.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-07.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Evening clouds above Tor Ranch</figcaption>
+        </div>
+
+        <div class="gallery-content-box2" id="gallery-pic-box8">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-08.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-08.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Rainbow over the alfalfa</figcaption>
+        </div>
+
+        <div class="gallery-content-box3" id="gallery-pic-box9">
+            <img class="gallery-pic" src="images/seed-400x300.jpg" data-src="images/gallery-09.jpg" alt="weather">
+            <!-- <img class="gallery-pic" src="images/gallery-09.jpg" alt="weather"> -->
+            <figcaption class="gallery-fig">Rain at High Lake</figcaption>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer3">
+      <p class="p-footer">
+        <span >Ⓒ<a href="weather.html"
+            >UpFrontWeather.com</a
+          >|</span>
+
+        <span>Attributions | </span>
+        <span>Scott R. LeFoll</span>
+      </p>
+      <p class="p-footer2">
+        <span id="date-time"></span>
+      </p>
+    </footer>
+
+    <script>
+      let dt = new Date();
+      const currentDate = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
+      document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
+    </script>    
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/windchill.js"></script>
+  </body>
+</html>
+
+<!-- ***************************************************** -->

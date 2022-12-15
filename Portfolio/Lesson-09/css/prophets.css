@@ -1,0 +1,60 @@
+h1 {
+    color: blue;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3px;
+    margin-left: 1em;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    background-color: #9b6dff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    place-items: center;
+}
+
+h1 {
+    color: blue;
+    
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    display: flex;
+    position: relative;
+    top: -10px;
+    justify-content: center;
+
+}
+
+.birthdate {
+    display: flex;
+    position: relative;
+    top: -2rem;
+    justify-content: center;
+}
+
+.birthplace {
+    display: flex;
+    position: relative;
+    top: -3.5rem;
+    justify-content: center;
+
+}
+
+
+img {
+    display: block;
+    position: relative;
+    top: -3rem;
+    margin: 0 auto;
+}
