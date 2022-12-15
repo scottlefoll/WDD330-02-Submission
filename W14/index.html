@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta 
+        charset="UTF-8" 
+        http-equiv="X-UA-Compatible"
+        
+        content="width=device-width, initial-scale=1.0, IE=edge"
+        name="viewport" 
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Proxima+Nova" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+    <script src="js/jquery.keyframes.min.js"></script>
+    <script src="js/aiart.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/scripts.js"></script>  
+
+    <title>AI Art | Art bent by the matrix. | Home.</title>
+  </head>
+
+  <body >
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/6280f6037b967b11798f6fe5/1g33s1vev";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+
+    <div class="content">
+      <header>
+        <div class="navbar1">
+          <nav>
+            <ul>
+              <li>
+                <div class="logo-box">
+                  <a href="index.html"
+                    ><img
+                      class="logo-image"
+                      src="images/tech.png"
+                      alt="AI Art Logo image"
+                  /></a>
+                </div>
+              </li>
+              <li><a href="index.html">Home</a></li>              
+              <li><a href="transfer.html" target="_self">Transfer</a></li>
+              <li><a href="aiart.html" target="_self">AI</a></li>
+              <li><a href="about.html" target="_self">About</a></li>
+              <li><a href="contact.html" target="_self">Contact</a></li>
+            </ul>
+            <h1 class="home-headline1">AI Art</h1>
+          </nav>
+        </div>
+      </header>
+
+      <!-- <main onload="displayArt()"> -->
+      <main>
+          <div class="banner-box">
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Art"
+              src="images/ai.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Highland"
+              src="images/cow.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Chicago"
+              src="images/chicagoc.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Starry night"
+              src="images/starrynight.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Swirly Face"
+              src="images/swirly.jpeg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Wreck"
+              src="images/wreck.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The couple"
+              src="images/couple.jpeg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="MIT"
+              src="images/stata.jpg"
+            />           
+            <img
+              class="mySlides w3-animate-fading"
+              alt="The Tent"
+              src="images/tent.jpg"
+            />
+            <img
+              class="mySlides w3-animate-fading"
+              alt="Chicago Wave"
+              src="images/chicagow.jpg"
+            />
+          </div>
+
+          <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              myIndex++;
+              if (myIndex > x.length) {
+                myIndex = 1;
+              }
+              x[myIndex - 1].style.display = "block";
+              setTimeout(carousel, 9000);
+            }
+          </script>
+
+          <div class="home-box">
+            <p>
+              <img
+                class="circle-tips"
+                src="images/tips.png"
+                alt="tips"
+                title="Quick Tips"
+              />
+            </p>
+            <iframe
+              src="circle_menu.html"
+              class="circle_menu_widget"
+              style="border: none"
+              title="Iframe Circle_Menu"
+            ></iframe>
+            <h2 class="home-headline1a">Fast Style Transfer</h2>
+            <h3 class="home-headline2">Introduction</h3>
+
+            <p class="home-paragraph1">
+              AI art has been making incredible strides for the last couple of years. This site allows you to choose a painting and a photo image, and
+              then uses one of the art AI algorithems called Fast Style Transfer to transform the photo image into the style of the art, rendering a 
+              new image in the process. For more information on this AI art method click here: <a href="transfer.html" target="_self">fast style transfer</a>.
+              If you would like to read about other ai art algorithms, click here: <a href="aiart.html" target="_self">ai art algorithms</a>.<br><br>
+              
+              Simply click on one of the art styles below, or click on the "Pick your own style" button below and upload one of your own. Then choose 
+              a photo image by clicking on the "Pick your own photo" button and uploading. After that, just click on the "Click to transfer" button 
+              and the algorithm will "transfer" the photo into the style of the art work, creating a new image in the output box. You can then right 
+              click on the new image and download it.
+            </p>
+
+            <div class=""home-paragraph1">
+                <h2>AI Art</h2>
+                <h4>To create an AI fast style transfer:</h4>
+            </div>
+            <div class="home-paragraph1">
+                <ul>
+                    <li>- Click on an art image below to select it, or on the "Pick your own style" button at the bottom.</li>
+                    <li>- Click on the "Pick your own photo button" to upload a photo.</li>
+                    <li>- Click the "Transfer" button to transform the photo into the style of the painting.</li>
+                </ul> 
+            </div><br><br><br>
+
+        <!-- The three art columns -->
+			<div class="row">
+				<div class="column">
+					<img src="images/starrynight.JPG" alt="starryNight" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/birds.JPG" alt="birds" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/wreck.jpg" alt="wreck" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/harvest.JPG" alt="harvest" class="art-image" onclick="displayArt(this);">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<img src="images/rain.jpg" alt="rain" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/udnie.JPG" alt="udnie" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/scream.jpg" alt="scream" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img  src="images/muse.jpg" alt="muse" class="art-image" onclick="displayArt(this);">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<img src="images/fuji.JPG" alt="mountFuji" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/wave.JPG" alt="wave" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/park.JPG" alt="park" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/abstract1.JPG" alt="abstract1" class="art-image" onclick="displayArt(this);">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<img src="images/beach.JPG" alt="beach" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/muse.jpg" alt="muse" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/stairs.JPG" alt="stairs" class="art-image" onclick="displayArt(this);">
+				</div>
+				<div class="column">
+					<img src="images/abstract3.JPG" alt="abstract3" class="art-image" onclick="displayArt(this);">
+				</div>
+			</div><br><br><br><br><br>
+
+
+<!-- </div> -->
+        <!-- File input field -->
+        <!-- <p>Upload an Image</p>
+        <input type="file" id="file"
+            onchange="return fileValidation()" /> -->
+
+        <!-- <input type="file" id="myFile" multiple="" size="50" onchange="choosePhoto()"> -->
+
+        <!-- Image preview -->
+        <div id="imagePreview"></div>
+            <div class="photo-container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="photoImg" style="width:100%">
+            <div id="photoText"></div>
+        </div>
+        <div class="container-transfer">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+        </div>
+
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <div class="box">
+                        <input type="file" id="contentFile" target="content" class="inputfile inputfile-red" data-multiple-caption="{count} files selected" multiple />
+                        <label for="contentFile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
+                            </svg> 
+                            <span>Pick your own photo </span>
+                        </label>
+                    </div>
+                    <div class="imageContainer">
+                        <div class="scan scan-content"></div>
+                        <div class="screen">
+                            <img class="col-12 p-0" id="contentImg" src="camp.jpg"/> 
+                        </div>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center pt-md-4 mt-md-4 pt-lg-5 mt-lg-5 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-4 mt-3">
+                            <div class="arrowAnim left-to-right">
+                                <div class="arrowSliding">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay1">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay2">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay3">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4"><i class="fas fa-plus"></i></div>                        
+                        <div class="col-4 mt-3">
+                            <div class="arrowAnim right-to-left">
+                                <div class="arrowSliding">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay1">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay2">
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="arrowSliding delay3">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="col-12 text-center p-0 pt-3 pb-3">
+                        <button class="btn btn-transfer">
+                            <i class="fas fa-random"></i> 
+                            <span>Transfer</span>
+                        </button>
+                    </div>
+                    <div class="col-12 arrowAnim top-to-bottom">
+                        <div class="arrowSliding">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay1">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <div class="box">
+                        <input type="file" id="styleFile" target="style" class="inputfile inputfile-blue" data-multiple-caption="{count} files selected" multiple />
+                        <label for="styleFile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/>
+                            </svg> 
+                            <span>Pick your own style </span>
+                        </label>
+                    </div>
+                    <div class="imageContainer">
+                        <div class="scan scan-style"></div>
+                        <div class="screen">
+                            <img class="col-12 p-0" id="styleImg" src="starrynight.JPG"/> 
+                        </div>
+                        <em></em>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-block d-md-none">
+                <div class="row col-12 text-center p-0 m-0 mt-3">
+                    <div class="col-4 mt-3">
+                        <div class="arrowAnim leftTop-to-rightBottom">
+                            <div class="arrowSliding">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay1">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay3">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4"><i class="fas fa-plus"></i></div>                        
+                    <div class="col-4 mt-3">
+                        <div class="arrowAnim rightTop-to-leftBottom">
+                            <div class="arrowSliding">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay1">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay2">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="arrowSliding delay3">
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-block d-md-none">
+                <div class="col-10 col-md-6 col-lg-4 offset-1 offset-md-3 offset-lg-4 text-center pt-3 pb-2">
+                    <button  class="btn btn-transfer">
+                        <i class="fas fa-random"></i> 
+                        <span>Click to transfer</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="arrowAnim top-to-bottom">
+                        <div class="arrowSliding">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay1">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-md-3">
+                <div class="col-12 col-md-4 offset-md-4 text-center">
+                        <div class="canvasContainer col-12 p-0">
+                            <i id="transfering" class="fas fa-spinner fa-spin d-none"></i>
+                            <canvas id="stylized" class="d-none"></canvas>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="last-paragraph">
+            <br><br>
+        </div>
+
+
+            <footer class="social-footer">
+              <div>
+                <div class="meta">©2022 Scott LeFoll - WDD 330-02</div>
+                <a href="mailto:scottlefoll@gmail.com"
+                  ><i class="meta2">scottlefoll@gmail.com</i></a
+                >
+
+                <iframe
+                  src="social-widget.html"
+                  class="social-widget"
+                  style="border: none"
+                  title="Iframe Social"
+                ></iframe>
+              </div>
+            </footer>
+          </div>
+      </main>
+    </div>
+    <script src="js/style-transfer.js"></script>
+  </body>
+</html>
